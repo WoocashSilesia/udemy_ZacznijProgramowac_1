@@ -6,13 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-config: { [key: string]: string  } = null;
+title = 'Lista Zadań';
 
-constructor() {
-  this.config = {
-    title: 'Lista zadań',
-    footer: '© Lista zadań zbudowana w Angularze',
-    date: new Date().toDateString()
-  };
+get footer(): string {
+  return '2020 © Lista zadań,All rights reserved.';
 }
 }
