@@ -5,4 +5,14 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {}
+export class AppComponent {
+config: { [key: string]: string  } = null;
+
+constructor() {
+  this.config = {
+    title: 'Lista zadań',
+    footer: '© Lista zadań zbudowana w Angularze',
+    date: new Date().toDateString()
+  };
+}
+}
